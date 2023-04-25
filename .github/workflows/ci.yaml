@@ -11,6 +11,10 @@ jobs:
             node-version: 18
         - name: Install
           run: npm install
-        - name: Test
-          run: npm run wdio
+       -  name: Set execute permission for wdio
+          run: chmod +x ./node_modules/.bin/wdio
+
+        - name: Run tests
+          run: ./node_modules/.bin/wdio wdio.conf.js
+
   

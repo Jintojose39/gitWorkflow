@@ -12,5 +12,5 @@ jobs:
         - name: Install
           run: npm install
         - name: Test
-          run: npm run Test
+          run: npm run test:local
      

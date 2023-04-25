@@ -11,8 +11,10 @@ jobs:
             node-version: 18
         - name: Install
           run: npm install
-        - name: Add WebdriverIO to PATH
-          run: echo "::add-path::$(pwd)/node_modules/.bin"
         - name: Test
           run: npm run wdio
-        
+        - uses: actions/upload-artifact@v1
+          if: failure()
+          with:
+            name: logs
+            path: logs

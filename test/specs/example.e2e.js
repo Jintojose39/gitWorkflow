@@ -11,6 +11,7 @@ describe('My Login application', () => {
             'You logged into a secure area!');
 
             console.log("This is demo test for login actions");
+            console.log("Login message added");
     });
 });
 
